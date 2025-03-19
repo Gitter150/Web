@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+body {
+    border: 1px solid black;
+    margin: 0px;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.916);
+}
+#container {
+    height: 90%;
+    width: 30%;
+    border: none;
+    border-radius: 3%;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    background-color: rgb(16, 16, 16);
+    box-shadow: 0 0 15px 5px rgba(241, 5, 5, 0.8);
+    animation: pulseGlowShadow 2s infinite alternate ease;
+}
+
+@keyframes pulseGlowShadow {
+    0% {
+        box-shadow: 0 0 15px 5px rgba(241, 5, 5, 0.8);
+    }    
+    100% {
+        box-shadow: 0 0 15px 5px rgb(49, 28, 239); 
+        /* transform: scale(1.05); */
+    }
+}
+
+#login-heading {
+    font-family: 'Orbitron';
+    font-size: 300%;
+    display: block;
+    align-self: flex-start;
+    color: rgb(206, 203, 203);
+    justify-self: center;
+    margin-top: 0px;
+    animation: pulseGlowText 2s infinite alternate; 
+}
+@keyframes pulseGlowText {
+    0% {
+        color: rgb(137, 26, 26);
+        text-shadow: 0px 0px 20px rgba(241, 5, 5, 0.8);
+    }
+    100% {
+        color: rgb(49, 28, 239);
+        text-shadow: 0px 0px 20px rgb(49, 28, 239); 
+    }
+}
+
+#login-underline {
+    position: relative;
+    width: 100%;
+    top: -6vh;
+    height: 0.001vh;
+    border: 1px solid rgb(184, 179, 179);
+    margin: none;
+    color: white;
+    animation: pulseGlowLine 2s infinite alternate;
+    box-shadow: none;
+    padding: none;
+}
+
+@keyframes pulseGlowLine {
+    0% {
+        border-color: rgb(137, 26, 26);
+        box-shadow: 0px 0px 15px 2px rgba(241, 5, 5, 0.8);
+    }
+    100% {
+        border-color: rgb(49, 28, 239);
+        box-shadow: 0px 0px 15px 2px rgb(49, 28, 239);
+    }
+}
+
+#username {
+    color:white;
+    animation: pulseGlowText 2s infinite alternate;
+    font-family: monospace;
+    font-size: 200%;
+    margin-left: 5%;
+    border:none;
+    font-weight: 700;
+}
+
+#username-field {
+    background-color: rgba(34, 34, 33, 0.973);
+    border: none;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 5%;
+}
+
+

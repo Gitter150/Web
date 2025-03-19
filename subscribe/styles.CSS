@@ -1,0 +1,28 @@
+#button {
+    color: rgb(35, 35, 35);
+    border: None;
+    background-color: rgb(247, 252, 252);
+    border-radius: 10rem;
+    padding-left: 17px;
+    padding-right: 17px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    font-weight: 700;
+    transition: background-color 0.1s;
+    font-family: sans-serif;
+    margin: 1px;
+}
+#button:hover{
+    cursor: pointer;
+    background-color: rgb(218, 219, 218);
+    color:black
+}
+
+body {
+    background-color: rgb(30, 30, 30);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}

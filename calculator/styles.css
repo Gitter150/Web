@@ -1,0 +1,56 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 100vh;
+    background-color: rgb(20, 20, 20);
+}
+
+#box {
+    border: none;
+    height: 81vh;
+    width: 30vw;
+    box-shadow: 0px 0px 15px 5px rgb(0, 0, 0);
+    border-radius: 2%;
+    background-color: rgb(11, 11, 11);
+    gap: 10px;
+}
+
+#display {
+    height: 20%;
+    background-color: rgb(12, 12, 12);
+    color: rgb(174, 104, 34);
+    font-family: monospace;
+    font-size: 300%;
+    position: relative;
+    font-weight:bold;
+}
+
+#result {
+    position: absolute;
+    bottom: 0px;
+    right: 2%;
+}
+
+.cards {
+    width: 24%;
+    height: 19.5%; 
+    border: none;
+    border-radius: 5%;
+    background-color: rgb(15, 15, 15);
+    padding: 0px;
+    margin: 2px 0px 1px 0px;
+    color: rgb(95, 95, 95);
+    font-size: 250%;
+    font-family:monospace;
+}
+
+.cards:hover {
+    background-color: rgb(20, 20, 20);
+    cursor: pointer;
+}
+
+.cards:active {
+    background-color: rgb(15, 15, 15);
+}
