@@ -13,7 +13,7 @@ body {
     width: 30vw;
     box-shadow: 0px 0px 15px 5px rgb(0, 0, 0);
     border-radius: 2%;
-    background-color: rgb(11, 11, 11);
+    background-color: rgb(12, 12, 12);
     gap: 10px;
 }
 
@@ -37,13 +37,14 @@ body {
     width: 24%;
     height: 19.5%; 
     border: none;
-    border-radius: 5%;
+    border-radius: 100%;
     background-color: rgb(15, 15, 15);
     padding: 0px;
     margin: 2px 0px 1px 0px;
     color: rgb(95, 95, 95);
     font-size: 250%;
     font-family:monospace;
+    transform: scale(0.8); 
 }
 
 .cards:hover {
@@ -52,5 +53,47 @@ body {
 }
 
 .cards:active {
-    background-color: rgb(15, 15, 15);
+    background-color: rgb(25, 25, 25);
+}
+
+#C {
+    background-color: rgb(245, 125, 5);
+    color: black;
+}
+
+#C:hover {
+    background-color: rgb(203, 103, 3);
+}
+
+#C:active {
+    background-color: rgb(167, 85, 2);
+}
+
+#AC {
+    background-color: rgb(210, 16, 16);
+    color: black;
+}
+
+#AC:hover {
+    background-color: rgb(161, 12, 12);
+}
+
+#AC:active {
+    background-color: rgb(141, 12, 12);
+}
+
+.ops {
+    background-color: bisque;
+}
+
+.ops:hover {
+    background-color: rgb(224, 200, 170);
+}
+
+.ops:active {
+    background-color: rgb(176, 156, 133);
+}
+
+.digs {
+    transform: scale(1);
 }
