@@ -7,7 +7,12 @@ ans = result.textContent;
 buttonIds.forEach((id) => {
     getI(id).addEventListener("click",() => {
         if (id === "=") {
-            result.textContent = eval(result.textContent.replace("Ans",ans));
+            try {
+                result.textContent = eval(result.textContent.replace("Ans",ans));
+            }
+            catch (e){
+                result.textContent = "Invalid Input";
+            }
             ans = result.textContent;
         }
         else if(id === "C") {
@@ -18,8 +23,8 @@ buttonIds.forEach((id) => {
                 result.textContent = "0";
                 return;
             }
-            if(result.textContent.slice(-1) === "s") {
-                result.textContent = result.textContent.replace("Ans","");
+            if(result.textContent.slice(-3) === "Ans") {
+                result.textContent = result.textContent.slice(0,result.textContent.length-2);
                 if (result.textContent === "") {
                     result.textContent = "0";
                     return;
@@ -34,6 +39,10 @@ buttonIds.forEach((id) => {
                 return;
             }
             if(result.textContent === "NaN") {
+                result.textContent = "0";
+                return;
+            }
+            if(result.textContent === "Invalid Input") {
                 result.textContent = "0";
                 return;
             }
