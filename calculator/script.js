@@ -23,13 +23,13 @@ buttonIds.forEach((id) => {
                 result.textContent = "0";
                 return;
             }
-            if(result.textContent.slice(-3) === "Ans") {
-                result.textContent = result.textContent.slice(0,result.textContent.length-2);
-                if (result.textContent === "") {
+            if(result.textContent.slice(-3).trim() === "Ans") {
+                result.textContent = result.textContent.slice(0,result.textContent.length-3).trim();                
+                if(result.textContent === "") {
                     result.textContent = "0";
-                    return;
                 }
-            }
+                return;
+            }            
             if((/^\d$/).test(result.textContent.slice(1))) {
                 result.textContent = "0";
                 return;
