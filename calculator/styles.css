@@ -9,22 +9,24 @@ body {
 
 #box {
     border: none;
-    height: 81vh;
-    width: 30vw;
+    height: 90vh;
+    width: 31vw;
     box-shadow: 0px 0px 15px 5px rgb(0, 0, 0);
-    border-radius: 2%;
+    border-radius: 10%;
     background-color: rgb(12, 12, 12);
-    gap: 10px;
 }
 
 #display {
     height: 20%;
-    background-color: rgb(12, 12, 12);
+    background-color: rgb(15, 15, 15);
     color: rgb(174, 104, 34);
     font-family: monospace;
     font-size: 300%;
     position: relative;
     font-weight:bold;
+    border-top-left-radius: 15%;
+    border-top-right-radius: 15%;
+    margin-bottom: 2%;
 }
 
 #result {
@@ -34,17 +36,17 @@ body {
 }
 
 .cards {
-    width: 24%;
-    height: 19.5%; 
+    width: 21%;
+    height: 15%; 
     border: none;
     border-radius: 100%;
     background-color: rgb(15, 15, 15);
     padding: 0px;
-    margin: 2px 0px 1px 0px;
+    margin: 2px 0px 2px 12px;
     color: rgb(95, 95, 95);
     font-size: 250%;
     font-family:monospace;
-    transform: scale(0.8); 
+    /* transform: scale(0.8); */
 }
 
 .cards:hover {
@@ -84,6 +86,7 @@ body {
 
 .ops {
     background-color: bisque;
+    transform: scale(0.8);
 }
 
 .ops:hover {
