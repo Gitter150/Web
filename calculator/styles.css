@@ -19,7 +19,7 @@ body {
 @media (max-width: 600px) {
     #box {
         width: 95vw;            /* Use almost full viewport width */
-        height: auto;           /* Let height adjust automatically */
+        height: 95vh;           /* Let height adjust automatically */
         max-height: 90vh;       /* But don't exceed 90% of viewport height */
         border-radius: 5%;       /* Slightly less rounded corners */
         margin: 0 auto;         /* Center horizontally */
