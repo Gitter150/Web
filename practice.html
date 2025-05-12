@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+</head>
+<body>
+    <script> 
+        alert("Who's there?");
+        response = prompt();
+        if(response == "Admin") {
+            pass = prompt("Password?");
+            if(pass == "TheMaster") {
+                alert("Welcome!");
+            }
+            else if(pass == null || pass == "") {
+                alert("Canceled");
+            }
+            else {
+                alert("Wrong Password");
+            }
+        }
+        else if(response == "" || response == null) {
+            alert("Canceled");
+        }
+        else {
+            alert("I don't know you");
+        }
+    </script>
+</body>
+</html>
