@@ -32,6 +32,15 @@ function List() {
             curr = curr.next;
         }
     }
+    this.reverse = () => {
+        if(this.size <= 1) return;
+        let curr = this.head;
+        while( curr ) {
+            [curr.prev, curr.next] = [curr.next, curr.prev];
+            curr = curr.prev;
+        }
+        [this.head, this.tail] = [this.tail, this.head];
+    };
 }
 
 function toLinkedList(arr) {
