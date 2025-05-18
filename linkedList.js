@@ -1,68 +1,44 @@
+let arr = [1,4,2,5,7,4,1];
 
-function Node(data) {
-    
-    this.data = data;
-    this.next = null;
-    this.prev = null;
-}
+arr.forEach((num) => list.push_back(num));
+
+let list = toLinkedList(arr);
+
+list.print();
 
 function List() {
-
+    this.Node = function(num) {
+        this.data = num;
+        this.next = null;
+        this.prev = null;
+    }
     this.head = null;
     this.tail = null;
-
-    this.push_front = function(data) {
-
-        let newNode = new Node(data);
-
-        if(this.head == null) {
-            this.head = newNode;
-            this.tail = this.head;
-            return;
-        }
-
-        this.head.prev = newNode;  // yeah this.head.prev is the new node
-        newNode.next = this.head;
-        this.head = newNode;
-    }
-
-    this.push_back = function(data) {
-
-        let newNode = new Node(data);
-
-        if(this.tail == null) {
-            this.tail = newNode;
+    this.size = 0;
+    this.push_back = (num) => {
+        if(this.size == 0) {
+            this.tail = new this.Node(num);
             this.head = this.tail;
-            return;
+            this.size++;
+            return; 
         }
-
-        this.tail.next = newNode;
-        newNode.prev = this.tail;
-        this.tail = newNode;
-    }
-
-    this.print = function() {
-
-        if(this.head == null) {
-            return;
+        this.tail.next = new this.Node(num); // remmeber, this.tail.next is the new node!
+        this.tail.next.prev = this.tail;
+        this.tail = this.tail.next;
+        this.size += 1;
+    };
+    this.print = () => {
+        let curr = this.head;
+        while (curr) {
+            process.stdout.write(curr.data + (curr.next ? " -> " : "\n"));
+            curr = curr.next;
         }
-
-        let currNode = this.head;
-
-        while(currNode != this.tail) {
-            process.stdout.write(currNode.data+" -> ");
-            currNode = currNode.next;
-        }
-
-        process.stdout.write(currNode.data+"\n");
     }
 }
 
-let lst = new List();
-lst.push_back(3);
-lst.push_back(4);
-lst.push_back(5);
-lst.print();
-lst.push_front(2);
-lst.push_front(1);
-lst.print();
+function toLinkedList(arr) {
+    let list = new List();
+    arr.forEach((item) => list.push_back(item));
+    return list;
+}
+
