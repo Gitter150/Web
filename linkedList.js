@@ -28,7 +28,7 @@ function List() {
     this.print = () => {
         let curr = this.head;
         while (curr) {
-            process.stdout.write(curr.data + (curr.next ? " -> " : "\n"));
+            process.stdout.write(curr.data + (curr.next ? " <-> " : "\n"));
             curr = curr.next;
         }
     }
