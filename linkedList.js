@@ -1,7 +1,5 @@
 let arr = [1,4,2,5,7,4,1];
 
-arr.forEach((num) => list.push_back(num));
-
 let list = toLinkedList(arr);
 
 list.print();
