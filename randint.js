@@ -4,4 +4,4 @@ function randint(a, b) {
     return Math.floor(scaledValue);
 }
 
-console.log(randint(-10,10));
+for(let i = 0; i < 100; i++) console.log(randint(-10,10));
