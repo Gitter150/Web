@@ -41,6 +41,32 @@ function List() {
         }
         [this.head, this.tail] = [this.tail, this.head];
     };
+    
+    this.sort = () => {
+        this.mergeSort(this.head, this.tail);
+    }
+    this.mergeSort = (head, tail) => {
+        curr = head;
+        size = 0;
+        while(curr) {
+            size++;
+            curr = curr.next;
+        }
+        if(size <= 1) return;
+        leftHead = head;
+        // to find middle node
+        slow = fast = head;
+        while(fast && fast.next) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        rightHead = slow;
+        mergeSort(leftHead, rightHead.prev);
+        mergeSort(rightHead, tail);
+        merge(
+            leftHead, rightHead, tail
+        );
+    };
 }
 
 function toLinkedList(arr) {
